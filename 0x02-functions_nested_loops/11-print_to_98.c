@@ -3,17 +3,23 @@
 /**
 *print_to_98 - prints all natural numbers from n to 98
 *@n: first number
-*Return: returns the sum
+*Return: no return
 */
 void print_to_98(int n)
 {
-	while (n != 98)
+	int count = 0;
+
+	while (count == 0)
 	{
-		printf("%d, ", n);
+		printf("%d", n);
+		if (n == 98)
+			count = 1;
+		else
+			printf(", ");
 		if (n > 98)
 			n--;
 		else
 			n++;
 	}
-	printf("%d\n", n);
+	printf("\n");
 }
